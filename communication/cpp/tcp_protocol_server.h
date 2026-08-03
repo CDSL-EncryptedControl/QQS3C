@@ -91,6 +91,9 @@ class tcp_server
             else
             {
                 setsockopt(this->socket_instance[1], IPPROTO_TCP, TCP_NODELAY, (const char*)&opt, sizeof(opt));
+                int buf_size = this->byte_size;
+                setsockopt(this->socket_instance[1], SOL_SOCKET, SO_RCVBUF, (const char*)&buf_size, sizeof(buf_size));
+                setsockopt(this->socket_instance[1], SOL_SOCKET, SO_SNDBUF, (const char*)&buf_size, sizeof(buf_size));
                 if(this->print_flag)
                 {
                     cout << "def: _constuct | alert | connect" << endl;
