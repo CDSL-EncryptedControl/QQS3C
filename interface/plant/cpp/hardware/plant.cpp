@@ -1,9 +1,13 @@
 #define _USE_MATH_DEFINES
+#define WIN32_LEAN_AND_MEAN
 #include <iostream>
 #include <cstdint>
 #include <string>
 #include <cmath>
 #include <chrono>
+#include <windows.h>
+#include <timeapi.h>
+#pragma comment(lib, "winmm.lib")
 #include "tcp_protocol_server_windows.h"
 #include "hil.h"
 #include "quanser_timer.h"
@@ -14,6 +18,12 @@ const int port = 9999;
 
 int main()
 {
+    // Windows optimizer
+    SetPriorityClass(GetCurrentProcess(), REALTIME_PRIORITY_CLASS);
+    SetThreadPriority(GetCurrentThread(), THREAD_PRIORITY_TIME_CRITICAL);
+    SetThreadAffinityMask(GetCurrentThread(), 1 << 0);
+    timeBeginPeriod(1);
+    
     t_card board;
     t_error result;
     // if you want to use hardware change to 1 else 0 is virtual(QLab)
@@ -176,5 +186,6 @@ int main()
         hil_close(board);
     }
 
+    timeEndPeriod(1);
     return 0;
 }
