@@ -71,7 +71,7 @@ class tcp_server
 
             int opt = 1;
             setsockopt(this->socket_instance[0], SOL_SOCKET, SO_REUSEADDR, (const char*)&opt, sizeof(opt));
-            setsockopt(this->socket_instance[0], IPPROTO_TCP, TCP_NODELAY, (const char*)&opt, sizeof(opt));
+            
 
             bind(this->socket_instance[0], (struct sockaddr*)&this->server, sizeof(this->server));
             listen(this->socket_instance[0], 1);
@@ -103,6 +103,7 @@ class tcp_server
             }
             else
             {
+                setsockopt(this->socket_instance[1], IPPROTO_TCP, TCP_NODELAY, (const char*)&opt, sizeof(opt));
                 if(this->print_flag)
                 {
                     cout << "def: _constuct | alert | connect" << endl;
