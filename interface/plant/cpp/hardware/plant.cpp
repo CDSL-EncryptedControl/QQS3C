@@ -116,7 +116,6 @@ int main()
             {
                 cout << "set" << endl;
                 stand_run = true;
-                continue;
             }
         }
         else
