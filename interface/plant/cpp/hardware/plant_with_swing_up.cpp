@@ -23,7 +23,7 @@ int main()
     // Windows optimizer
     SetPriorityClass(GetCurrentProcess(), REALTIME_PRIORITY_CLASS);
     SetThreadPriority(GetCurrentThread(), THREAD_PRIORITY_TIME_CRITICAL);
-    SetThreadAffinityMask(GetCurrentThread(), 1 << 0);
+    // SetThreadAffinityMask(GetCurrentThread(), 1 << 0);
     timeBeginPeriod(1);
     
     t_card board;
