@@ -4,6 +4,9 @@
 #include <string>
 #include <cmath>
 #include <chrono>
+#include <windows.h>
+#include <timeapi.h>
+#pragma comment(lib, "winmm.lib")
 #include "tcp_protocol_server_windows.h"
 #include "hil.h"
 #include "quanser_timer.h"
@@ -17,6 +20,12 @@ void swing_up(vector<double>&, double&);
 
 int main()
 {
+    // Windows optimizer
+    SetPriorityClass(GetCurrentProcess(), REALTIME_PRIORITY_CLASS);
+    SetThreadPriority(GetCurrentThread(), THREAD_PRIORITY_TIME_CRITICAL);
+    SetThreadAffinityMask(GetCurrentThread(), 1 << 0);
+    timeBeginPeriod(1);
+    
     t_card board;
     t_error result;
 
@@ -245,7 +254,9 @@ int main()
         hil_task_delete_all(board);
         hil_close(board);
     }
-
+    
+    timeEndPeriod(1);
+    
     return 0;
 }
 
