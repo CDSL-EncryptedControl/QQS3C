@@ -2,6 +2,8 @@ github.com/ALTree/bigfloat v0.2.0 h1:AwNzawrpFuw55/YDVlcPw0F0cmmXrmngBHhVrvdXPvM
 github.com/ALTree/bigfloat v0.2.0/go.mod h1:+NaH2gLeY6RPBPPQf4aRotPPStg+eXc8f9ZaE4vRfD4=
 github.com/CDSL-EncryptedControl/CDSL v1.0.0 h1:hFxNS/2disk4yPK+YvahpWENhZF/+vy8vnd1AT8Fe+U=
 github.com/CDSL-EncryptedControl/CDSL v1.0.0/go.mod h1:2dXYsfIywTo0Iesgn98zCtcwiZeEJjNr75Ly880rKNs=
+github.com/CDSL-EncryptedControl/QQS3C/communication/go v0.0.0-20260803020157-07c8a6289bbb h1:znJ4Gic9LqeBbDLyGwNA5fWcJGV9y//TkY64xXCoGZc=
+github.com/CDSL-EncryptedControl/QQS3C/communication/go v0.0.0-20260803020157-07c8a6289bbb/go.mod h1:6srbNBhmkHlTAUfoCrVdpFdk+1ThZ5jKA2/Z+9HiVB4=
 github.com/RFA0608/QQS3C/communication/go v0.0.0-20260204225441-5e4f0b4ac2a0 h1:lGoqq1gJ2M9UdkHkh8VtJaKBl3XnWcZ91QDSAkJO7Hw=
 github.com/RFA0608/QQS3C/communication/go v0.0.0-20260204225441-5e4f0b4ac2a0/go.mod h1:qC4clSH8yM5L+Reprk6TeTNkbs4hWlGUlSG//h/oPgA=
 github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
