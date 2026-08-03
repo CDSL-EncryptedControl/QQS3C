@@ -4,7 +4,7 @@ go 1.25.1
 
 require (
 	github.com/CDSL-EncryptedControl/CDSL v1.0.0
-	github.com/RFA0608/QQS3C/communication/go v0.0.0-20260204225441-5e4f0b4ac2a0
+	github.com/CDSL-EncryptedControl/QQS3C/communication/go v0.0.0-20260803020157-07c8a6289bbb
 	github.com/tuneinsight/lattigo/v6 v6.2.0
 )
 
