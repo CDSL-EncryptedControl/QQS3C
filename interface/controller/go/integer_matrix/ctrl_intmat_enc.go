@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"time"
 
-	tccp "github.com/RFA0608/QQS3C/communication/go/tpc"
+	tccp "github.com/CDSL-EncryptedControl/QQS3C/communication/go/tpc"
 
 	utils "github.com/CDSL-EncryptedControl/CDSL/utils"
 	RLWE "github.com/CDSL-EncryptedControl/CDSL/utils/core/RLWE"
