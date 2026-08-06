@@ -6,7 +6,7 @@ class nobs:
     ts = 0.02
     alpha = np.array([[1.5, 0.4]], dtype=float)
     beta = np.array([[1.5, 0.4]], dtype=float)
-    contractive_ratio = 0.6
+    contractive_ratio = 0.4
     epsilon = 1
 
     Km = 0.042
