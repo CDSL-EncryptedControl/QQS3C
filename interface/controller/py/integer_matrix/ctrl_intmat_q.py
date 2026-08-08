@@ -31,7 +31,7 @@ def integer_state_matrix():
     intmat_q = model.intmat_q(intmat.F_cv, intmat.G_cv, intmat.H_cv, intmat.R_cv)
 
     # set quantized level and quantize matrix
-    intmat_q.set_level(1000, 1000)
+    intmat_q.set_level(2000, 2000)
     intmat_q.quantize()
 
     # print matrix of F_q, G_q, H_q, and R_q
