@@ -4,9 +4,9 @@ import control as ct
 class nobs:
     # hyperparams
     ts = 0.01
-    alpha = np.array([[2, 1]], dtype=float)
-    beta = np.array([[2, 1]], dtype=float)
-    contractive_ratio = 0.72
+    alpha = np.array([[1.5, 0.4]], dtype=float)
+    beta = np.array([[1.5, 0.4]], dtype=float)
+    contractive_ratio = 0.4
     epsilon = 1
 
     Km = 0.042
